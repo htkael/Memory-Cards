@@ -31,8 +31,9 @@ function App() {
     async function getData() {
       try {
         setIsLoading(true);
-        const response = await fetch("https://api.tvmaze.com/shows/713/cast");
+        const response = await fetch("https://api.tvmaze.com/shows/431/cast");
         const data = await response.json();
+        console.log(data);
         const filteredData = data.filter(
           (entry) =>
             entry.character.name !== "Narrator" &&
